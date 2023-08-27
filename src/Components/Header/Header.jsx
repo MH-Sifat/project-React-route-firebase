@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Header = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 sticky-top">
   <div className="flex-1">
     <Link to='/' className="btn btn-ghost normal-case text-xl">BeOne</Link>
   </div>
@@ -24,9 +24,9 @@ const Header = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/order'>Orders</Link></li>
-        <li><a to='#details'>Details</a></li>
-        <li><a to='#catagories'>About</a></li>
-        <li><Link to='/registation'>SignUp</Link></li>
+        <li><a href='#details'>Details</a></li>
+        <li><a href='#catagories'>About</a></li>
+        <li><Link to='/login'>LogIn</Link></li>
       </ul>
     </div>
   </div>

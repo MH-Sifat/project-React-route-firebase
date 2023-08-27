@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div>
            <nav>
-           <div className="carousel w-full h-96 ">
+           <div className="carousel w-full h-96">
               <div id="slide1" className="carousel-item relative w-full">
                 <img src="https://www.swisswatchexpo.com/images/banner-home.jpg" className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -39,8 +39,17 @@ const Home = () => {
             <h2 className='text-center text-4xl pt-16 mt-16 pb-16 mb-16 text-indigo-900'>PRODUCT CATEGORY</h2>
             <div className='flex items-center p-y pb-16 mb-16'>
             <div className='w-25 p-10'>
-              <img src="./../../../src/assets/display.jpg" className='w-full' alt="" />
-            </div>
+            <div className="card card-side bg-base-100 shadow-xl">
+              <figure><img src="https://media.wired.com/photos/62477622228d429b3df65754/16:9/w_2095,h_1178,c_limit/Bulgari-2022_Octo-Finissimo-Ultra_Packshot_02-Gear.jpg" alt="Movie"/></figure>
+              <div className="card-body">
+                <h2 className="card-title">New Watch is released!</h2>
+                <p>Click the button to watch Details on app.</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">Watch</button>
+                </div>
+               </div>
+             </div>
+              </div>
             <div>
               <h2 className='text-center text-3xl p-5 text-indigo-800'>Products with quality</h2>
               <p className='text-center p-12 pt-8 text-cyan-700'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis iusto accusantium dolorum impedit illum possimus ad placeat ducimus id, facilis reprehenderit molestiae repudiandae, at architecto explicabo optio! Reprehenderit velit nam mollitia praesentium perferendis nulla.</p>
@@ -54,20 +63,20 @@ const Home = () => {
             <div className='flex items-center justify-around p-8 pb-16 mb-40 mt-26'>
             <div>
              <div className="card card-side bg-base-100 shadow-xl mb-16">
-               <figure><img src="./../../../src/assets/mobile.jpeg" alt="Movie"/></figure>
+               <figure><img src="https://www.mobiledokan.com/wp-content/uploads/2021/10/iPhone-13-series.jpg" className='w-80' alt="Movie"/></figure>
                <div className="card-body">
-                 <h2 className="card-title">New movie is released!</h2>
-                 <p>Click the button to watch on Jetflix app.</p>
+                 <h2 className="card-title">New Product is released!</h2>
+                 <p>Click the button to watch on app.</p>
                  <div className="card-actions justify-end">
                    <button className="btn btn-primary">see more</button>
                    </div>
                    </div>
               </div>
               <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src="./../../../src/assets/mobile.jpeg" alt="Movie"/></figure>
+                <figure><img src="https://www.mobiledokan.com/wp-content/uploads/2021/10/iPhone-13-series.jpg" className='w-80' alt="Movie"/></figure>
                 <div className="card-body">
-                 <h2 className="card-title">New movie is released!</h2>
-                 <p>Click the button to watch on Jetflix app.</p>
+                 <h2 className="card-title">New Product is released!</h2>
+                 <p>Click the button to watch on app.</p>
                  <div className="card-actions justify-end">
                    <button className="btn btn-primary">learn more</button>
                  </div>
@@ -76,20 +85,20 @@ const Home = () => {
             </div>
             <div>
             <div className="card card-side bg-base-100 shadow-xl mb-16">
-                <figure><img src="./../../../src/assets/mobile.jpeg" alt="Movie"/></figure>
+                <figure><img src="https://www.mobiledokan.com/wp-content/uploads/2021/10/iPhone-13-series.jpg" className='w-80' alt="Movie"/></figure>
                <div className="card-body">
-                 <h2 className="card-title">New movie is released!</h2>
-                 <p>Click the button to watch on Jetflix app.</p>
+                 <h2 className="card-title">New Product is released!</h2>
+                 <p>Click the button to watch on app.</p>
                  <div className="card-actions justify-end">
                    <button className="btn btn-primary">learn more</button>
                  </div>
                  </div>
               </div>
               <div className="card card-side bg-base-100 shadow-xl">
-               <figure><img src="./../../../src/assets/mobile.jpeg" alt="Movie"/></figure>
+               <figure><img src="https://www.mobiledokan.com/wp-content/uploads/2021/10/iPhone-13-series.jpg" className='w-80' alt="Movie"/></figure>
                 <div className="card-body">
-                  <h2 className="card-title">New movie is released!</h2>
-                   <p>Click the button to watch on Jetflix app.</p>
+                  <h2 className="card-title">New Product is released!</h2>
+                   <p>Click the button to watch on app.</p>
                   <div className="card-actions justify-end">
                 <button className="btn btn-primary">see more</button>
                  </div>

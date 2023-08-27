@@ -1,7 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../Components/Home/Home";
-import Order from "../Components/Order/Order";
+import Orders from "../Components/Orders/Orders";
+import Registation from "../Components/Registation/Registation";
+import Login from "../Components/Login/Login";
 
 const router = createBrowserRouter([
     {
@@ -14,12 +16,20 @@ const router = createBrowserRouter([
             },
             {
                 path:'/order',
-                element:<Order></Order>
+                loader: async () =>{
+                    return fetch("product.JSON")
+                },
+                element:<Orders></Orders>
             },
             {
-                path:'./.#about',
-                element:<Home></Home>
+                path:'/registation',
+                element:<Registation></Registation>
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
             }
+            
         ]
     },
 
