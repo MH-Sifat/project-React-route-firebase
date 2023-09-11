@@ -7,11 +7,11 @@ const Orders = () => {
     console.log(products);
     return (
         <div>
-            <h1 className='text-center text-4xl pt-5 text-indigo-800'>Order Now</h1>
+            <h1 className='text-center text-4xl pt-5 font-bold '>New Collection</h1>
             <div className='grid grid-cols-3 justify-around items-center m-12 p-8'>
                 {
                     products.map(product => <Order
-                        key={product.id}
+                        key={product._id}
                         product={product}
                     ></Order>)
                 }
