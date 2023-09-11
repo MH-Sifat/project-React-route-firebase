@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
 const Header = () => {
   const { logOut, user } = useContext(AuthContext);
-// console.log(user);
+  // console.log(user);
   const handleLogOut = () => {
     logOut();
   }
@@ -12,9 +12,9 @@ const Header = () => {
   // console.log(orders.length);
 
   useEffect(() => {
-      fetch(`http://localhost:2000/orders?email=${user?.email}`)
-          .then(res => res.json())
-          .then(data => setOrders(data))
+    fetch(`https://project1-amber.vercel.app/orders?email=${user?.email}`)
+      .then(res => res.json())
+      .then(data => setOrders(data))
   }, [user?.email])
 
   return (
@@ -26,8 +26,7 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1">
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/order'>Orders</Link></li>
-          <li><a href='#details'>Details</a></li>
-          <li><a href='#catagories'>About</a></li>
+
           {user?.email ? <li><a onClick={handleLogOut}>Logout</a></li> :
             <li><Link to='/login'>LogIn</Link></li>}
           {

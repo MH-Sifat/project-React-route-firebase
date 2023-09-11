@@ -25,10 +25,10 @@ const Checkout = () => {
             phone,
             address,
             massage: details,
-            status:"Pending"
+            status: "Pending"
         }
 
-        fetch('http://localhost:2000/orders', {
+        fetch('https://project1-amber.vercel.app/orders', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

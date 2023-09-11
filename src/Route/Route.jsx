@@ -21,7 +21,7 @@ const router = createBrowserRouter([
                 path: '/order',
                 element: <Orders></Orders>,
                 loader: async () => {
-                    return fetch("http://localhost:2000/services")
+                    return fetch("https://project1-amber.vercel.app/services")
                 }
             },
             {
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
             {
                 path: '/checkout/:productId',
                 element: <Checkout></Checkout>,
-                loader: ({ params }) => fetch(`http://localhost:2000/services/${params.productId}`)
+                loader: ({ params }) => fetch(`https://project1-amber.vercel.app/services/${params.productId}`)
             },
             {
                 path: '/registation',

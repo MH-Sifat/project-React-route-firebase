@@ -9,7 +9,7 @@ const Cart = () => {
     // console.log(orders);
 
     useEffect(() => {
-        fetch(`http://localhost:2000/orders?email=${user?.email}`)
+        fetch(`https://project1-amber.vercel.app/orders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email])
@@ -18,7 +18,7 @@ const Cart = () => {
         // console.log(id);
         const process = window.confirm('Do you want to delete?')
         if (process) {
-            fetch(`http://localhost:2000/orders/${id}`, {
+            fetch(`https://project1-amber.vercel.app/orders/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -33,14 +33,32 @@ const Cart = () => {
         }
     }
 
-    // const handleStatusUpdate = (id) => {
-    //     console.log('Click', id);
-    //     fetch(`http://localhost:2000/orders/${id}`,{})
-    // }
+    const handleStatusUpdate = (id) => {
+        // console.log('Click', id);
+        fetch(`https://project1-amber.vercel.app/orders/${id}`, {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify({ status: "Aproved" })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    alert('Product Aproved')
+                    const remainingStatus = orders.filter(od => od._id !== id);
+                    const approved = orders.find(ord => ord._id === id);
+                    approved.status = "Aproved";
+                    const newOrder = [approved, ...remainingStatus];
+                    setOrders(newOrder)
+                }
+            })
+    }
 
     return (
         <div className='my-5 py-5 container'>
-            <h1>Orders {user.email}</h1>
+            {/* <h1>Orders {user.email}</h1> */}
             <div className="m-12 overflow-x-auto">
                 <table className="table">
                     {/* head */}
